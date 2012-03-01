@@ -92,7 +92,7 @@
     if (self) {
         self.baseURL = baseURL;
         
-        self.tileCache = [NSMutableDictionary dictionaryWithCapacity:100];
+        self.tileCache = [NSMutableDictionary dictionaryWithCapacity:16];
         
         self.operationQueue = [[[NSOperationQueue alloc] init] autorelease];
         self.operationQueue.maxConcurrentOperationCount = 8;
@@ -157,6 +157,9 @@
     if (cachedImage && ![cachedImage isKindOfClass:[NSNull class]]) {
         CGImageRef result = cachedImage.CGImage;
         CGImageRetain(result);
+        
+        // Discard the tile now that we've drawn it
+        [tileCache removeObjectForKey:tileName];
         return result;
     } else
         return nil;

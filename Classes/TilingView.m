@@ -68,7 +68,6 @@
         tiledLayer.levelsOfDetail = 4;
         tiledLayer.imageName = name;
         tiledLayer.dataSource = [LSNetTiledLayerDataSource sharedDataSource];
-        tiledLayer.delegate = tiledLayer;
     }
     return self;
 }
