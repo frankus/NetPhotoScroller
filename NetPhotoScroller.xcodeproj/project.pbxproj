@@ -23,11 +23,11 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* PhotoScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* NetPhotoScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetPhotoScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* PhotoScroller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScroller_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* NetPhotoScroller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; path = NetPhotoScroller_Prefix.pch; sourceTree = "<group>"; };
 		9FA8DAEF1219E2F500415299 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		9FA8DAF11219E2F500415299 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoViewController.xib; sourceTree = "<group>"; };
 		9FA8E1561219E42F00415299 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		9FA8E15D1219E42F00415299 /* TilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingView.m; sourceTree = "<group>"; };
 		C9A438F111ADDDAC00EF1D55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB6BD24311FF733900FF3374 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		CB6BD26C11FF73C200FF3374 /* PhotoScroller-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PhotoScroller-Info.plist"; sourceTree = "<group>"; };
+		CB6BD26C11FF73C200FF3374 /* NetPhotoScroller-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; path = "NetPhotoScroller-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* PhotoScroller.app */,
+				1D6058910D05DD3D006BFB54 /* NetPhotoScroller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* PhotoScroller_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* NetPhotoScroller_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -91,7 +91,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CB6BD26C11FF73C200FF3374 /* PhotoScroller-Info.plist */,
+				CB6BD26C11FF73C200FF3374 /* NetPhotoScroller-Info.plist */,
 				9FA8DAEE1219E2F500415299 /* MainWindow.xib */,
 				9FA8DAF01219E2F500415299 /* PhotoViewController.xib */,
 			);
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* PhotoScroller */ = {
+		1D6058900D05DD3D006BFB54 /* NetPhotoScroller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PhotoScroller" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NetPhotoScroller" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -139,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = PhotoScroller;
+			name = NetPhotoScroller;
 			productName = Frogs;
-			productReference = 1D6058910D05DD3D006BFB54 /* PhotoScroller.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* NetPhotoScroller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +149,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PhotoScroller" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NetPhotoScroller" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -164,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* PhotoScroller */,
+				1D6058900D05DD3D006BFB54 /* NetPhotoScroller */,
 			);
 		};
 /* End PBXProject section */
@@ -225,9 +225,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PhotoScroller_Prefix.pch;
-				INFOPLIST_FILE = "PhotoScroller-Info.plist";
-				PRODUCT_NAME = PhotoScroller;
+				GCC_PREFIX_HEADER = NetPhotoScroller_Prefix.pch;
+				INFOPLIST_FILE = "NetPhotoScroller-Info.plist";
+				PRODUCT_NAME = NetPhotoScroller;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -238,9 +238,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PhotoScroller_Prefix.pch;
-				INFOPLIST_FILE = "PhotoScroller-Info.plist";
-				PRODUCT_NAME = PhotoScroller;
+				GCC_PREFIX_HEADER = NetPhotoScroller_Prefix.pch;
+				INFOPLIST_FILE = "NetPhotoScroller-Info.plist";
+				PRODUCT_NAME = NetPhotoScroller;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -278,7 +278,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PhotoScroller" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NetPhotoScroller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -287,7 +287,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PhotoScroller" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NetPhotoScroller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
