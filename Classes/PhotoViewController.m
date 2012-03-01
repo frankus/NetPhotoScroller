@@ -2,6 +2,7 @@
      File: PhotoViewController.m
  Abstract: Configures and displays the paging scroll view and handles tiling and page configuration.
   Version: 1.1
+ Modified: Frank Schmitt. Copyright (C) 2012 Laika Systems. CC BY 3.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -47,6 +48,7 @@
 
 #import "PhotoViewController.h"
 #import "ImageScrollView.h"
+#import "LSNetTiledLayerDataSource.h"
 
 @implementation PhotoViewController
 
@@ -100,7 +102,7 @@
     int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
     int lastNeededPageIndex  = floorf((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
     firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
-    lastNeededPageIndex  = MIN(lastNeededPageIndex, [self imageCount] - 1);
+    lastNeededPageIndex  = MIN(lastNeededPageIndex, [[LSNetTiledLayerDataSource sharedDataSource] imageCount] - 1);
     
     // Recycle no-longer-visible pages 
     for (ImageScrollView *page in visiblePages) {
@@ -153,9 +155,10 @@
     page.frame = [self frameForPageAtIndex:index];
     
     // Use tiled images
-    [page displayTiledImageNamed:[self imageNameAtIndex:index]
-                            size:[self imageSizeAtIndex:index]];
+    [page displayTiledImageNamed:[[LSNetTiledLayerDataSource sharedDataSource] imageNameAtIndex:index]
+                            size:[[LSNetTiledLayerDataSource sharedDataSource] imageSizeAtIndex:index]];
     
+    // FMS: The following with no longer work, because the images aren't included in the bundle
     // To use full images instead of tiled images, replace the "displayTiledImageNamed:" call
     // above by the following line:
     // [page displayImage:[self imageAtIndex:index]];
@@ -241,66 +244,13 @@
 - (CGSize)contentSizeForPagingScrollView {
     // We have to use the paging scroll view's bounds to calculate the contentSize, for the same reason outlined above.
     CGRect bounds = pagingScrollView.bounds;
-    return CGSizeMake(bounds.size.width * [self imageCount], bounds.size.height);
+    return CGSizeMake(bounds.size.width * [[LSNetTiledLayerDataSource sharedDataSource] imageCount], bounds.size.height);
 }
 
 
 #pragma mark -
 #pragma mark Image wrangling
 
-- (NSArray *)imageData {
-    static NSArray *__imageData = nil; // only load the imageData array once
-    if (__imageData == nil) {
-        // read the filenames/sizes out of a plist in the app bundle
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"ImageData" ofType:@"plist"];
-        NSData *plistData = [NSData dataWithContentsOfFile:path];
-        NSString *error; NSPropertyListFormat format;
-        __imageData = [[NSPropertyListSerialization propertyListFromData:plistData
-                                                        mutabilityOption:NSPropertyListImmutable
-                                                                  format:&format
-                                                        errorDescription:&error]
-                       retain];
-        if (!__imageData) {
-            NSLog(@"Failed to read image names. Error: %@", error);
-            [error release];
-        }
-    }
-    return __imageData;
-}
-
-- (UIImage *)imageAtIndex:(NSUInteger)index {
-    // use "imageWithContentsOfFile:" instead of "imageNamed:" here to avoid caching our images
-    NSString *imageName = [self imageNameAtIndex:index];
-    NSString *path = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
-    return [UIImage imageWithContentsOfFile:path];    
-}
-
-- (NSString *)imageNameAtIndex:(NSUInteger)index {
-    NSString *name = nil;
-    if (index < [self imageCount]) {
-        NSDictionary *data = [[self imageData] objectAtIndex:index];
-        name = [data valueForKey:@"name"];
-    }
-    return name;
-}
-
-- (CGSize)imageSizeAtIndex:(NSUInteger)index {
-    CGSize size = CGSizeZero;
-    if (index < [self imageCount]) {
-        NSDictionary *data = [[self imageData] objectAtIndex:index];
-        size.width = [[data valueForKey:@"width"] floatValue];
-        size.height = [[data valueForKey:@"height"] floatValue];
-    }
-    return size;
-}
-
-- (NSUInteger)imageCount {
-    static NSUInteger __count = NSNotFound;  // only count the images once
-    if (__count == NSNotFound) {
-        __count = [[self imageData] count];
-    }
-    return __count;
-}
-
+// FMS: moved to data source
 
 @end

@@ -2,6 +2,7 @@
      File: PhotoViewController.h
  Abstract: Configures and displays the paging scroll view and handles tiling and page configuration.
   Version: 1.1
+ Modified: Frank Schmitt. Copyright (C) 2012 Laika Systems. CC BY 3.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -69,11 +70,6 @@
 
 - (void)tilePages;
 - (ImageScrollView *)dequeueRecycledPage;
-
-- (NSUInteger)imageCount;
-- (NSString *)imageNameAtIndex:(NSUInteger)index;
-- (CGSize)imageSizeAtIndex:(NSUInteger)index;
-- (UIImage *)imageAtIndex:(NSUInteger)index;
 
 @end
 

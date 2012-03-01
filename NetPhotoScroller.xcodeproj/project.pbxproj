@@ -22,6 +22,8 @@
 		409414E71500009B00EF1600 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 409414DC1500009B00EF1600 /* AFXMLRequestOperation.m */; };
 		409414E81500009B00EF1600 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 409414DE1500009B00EF1600 /* UIImageView+AFNetworking.m */; };
 		409414ED150000D100EF1600 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 409414EC150000D100EF1600 /* JSONKit.m */; };
+		409414F0150003CD00EF1600 /* LSTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 409414EF150003CD00EF1600 /* LSTiledLayer.m */; };
+		409414F4150009E700EF1600 /* LSNetTiledLayerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 409414F3150009E700EF1600 /* LSNetTiledLayerDataSource.m */; };
 		9FA8DAF21219E2F500415299 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA8DAEE1219E2F500415299 /* MainWindow.xib */; };
 		9FA8DAF31219E2F500415299 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA8DAF01219E2F500415299 /* PhotoViewController.xib */; };
 		9FA8E15E1219E42F00415299 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E1571219E42F00415299 /* AppDelegate.m */; };
@@ -29,7 +31,6 @@
 		9FA8E1601219E42F00415299 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E15B1219E42F00415299 /* PhotoViewController.m */; };
 		9FA8E1611219E42F00415299 /* TilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E15D1219E42F00415299 /* TilingView.m */; };
 		C9A438F211ADDDAC00EF1D55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A438F111ADDDAC00EF1D55 /* QuartzCore.framework */; };
-		CB6BD25011FF733900FF3374 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB6BD24311FF733900FF3374 /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,11 @@
 		409414DE1500009B00EF1600 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		409414EB150000D100EF1600 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		409414EC150000D100EF1600 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		409414EE150003CD00EF1600 /* LSTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTiledLayer.h; sourceTree = "<group>"; };
+		409414EF150003CD00EF1600 /* LSTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTiledLayer.m; sourceTree = "<group>"; };
+		409414F1150008C300EF1600 /* LSTiledLayerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTiledLayerDataSource.h; sourceTree = "<group>"; };
+		409414F2150009E700EF1600 /* LSNetTiledLayerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNetTiledLayerDataSource.h; sourceTree = "<group>"; };
+		409414F3150009E700EF1600 /* LSNetTiledLayerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNetTiledLayerDataSource.m; sourceTree = "<group>"; };
 		9FA8DAEF1219E2F500415299 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		9FA8DAF11219E2F500415299 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoViewController.xib; sourceTree = "<group>"; };
 		9FA8E1561219E42F00415299 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,7 +79,6 @@
 		9FA8E15C1219E42F00415299 /* TilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilingView.h; sourceTree = "<group>"; };
 		9FA8E15D1219E42F00415299 /* TilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingView.m; sourceTree = "<group>"; };
 		C9A438F111ADDDAC00EF1D55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CB6BD24311FF733900FF3374 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		CB6BD26C11FF73C200FF3374 /* NetPhotoScroller-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NetPhotoScroller-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				409414E9150000A400EF1600 /* Vendor */,
-				CB6BD24311FF733900FF3374 /* ReadMe.txt */,
 				9FA8E1551219E42F00415299 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -203,6 +207,11 @@
 				9FA8E15B1219E42F00415299 /* PhotoViewController.m */,
 				9FA8E15C1219E42F00415299 /* TilingView.h */,
 				9FA8E15D1219E42F00415299 /* TilingView.m */,
+				409414EE150003CD00EF1600 /* LSTiledLayer.h */,
+				409414EF150003CD00EF1600 /* LSTiledLayer.m */,
+				409414F1150008C300EF1600 /* LSTiledLayerDataSource.h */,
+				409414F2150009E700EF1600 /* LSNetTiledLayerDataSource.h */,
+				409414F3150009E700EF1600 /* LSNetTiledLayerDataSource.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -257,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6BD25011FF733900FF3374 /* ReadMe.txt in Resources */,
 				9FA8DAF21219E2F500415299 /* MainWindow.xib in Resources */,
 				9FA8DAF31219E2F500415299 /* PhotoViewController.xib in Resources */,
 			);
@@ -286,6 +294,8 @@
 				409414E71500009B00EF1600 /* AFXMLRequestOperation.m in Sources */,
 				409414E81500009B00EF1600 /* UIImageView+AFNetworking.m in Sources */,
 				409414ED150000D100EF1600 /* JSONKit.m in Sources */,
+				409414F0150003CD00EF1600 /* LSTiledLayer.m in Sources */,
+				409414F4150009E700EF1600 /* LSNetTiledLayerDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

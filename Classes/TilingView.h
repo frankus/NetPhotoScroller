@@ -2,6 +2,7 @@
      File: TilingView.h
  Abstract: Handles tile drawing and tile image loading.
   Version: 1.1
+ Modified: Frank Schmitt. Copyright (C) 2012 Laika Systems. CC BY 3.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -55,6 +56,5 @@
 @property (assign) BOOL annotates;
 
 - (id)initWithImageName:(NSString *)name size:(CGSize)size;
-- (UIImage *)tileForScale:(CGFloat)scale row:(int)row col:(int)col;
 
 @end
