@@ -68,11 +68,12 @@
         tiledLayer.levelsOfDetail = 4;
         tiledLayer.imageName = name;
         tiledLayer.dataSource = [LSNetTiledLayerDataSource sharedDataSource];
+        tiledLayer.delegate = tiledLayer;
     }
     return self;
 }
 
--(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {    
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context {    
     CGRect rect = CGContextGetClipBoundingBox(context);
     
     // get the scale from the context by getting the current transform matrix, then asking for
@@ -80,7 +81,7 @@
     // This assumes (safely) that the view is being scaled equally in both dimensions.
     CGFloat scale = CGContextGetCTM(context).a;
     
-    LSTiledLayer *tiledLayer = (LSTiledLayer *)[self layer];
+    LSTiledLayer *tiledLayer = (LSTiledLayer *)layer;
     CGSize tileSize = tiledLayer.tileSize;
     
     // Even at scales lower than 100%, we are drawing into a rect in the coordinate system of the full
