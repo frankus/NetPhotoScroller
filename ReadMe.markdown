@@ -30,9 +30,9 @@ One solution is to use a blocking network call inside of these methods to fetch 
 
 ## Half-baked Areas
 
-- LSNetTiledLayerDataSource is a singleton, whereas it should probably be passed down the chain from the app delegate to the view
+- `LSNetTiledLayerDataSource` is a singleton, whereas it should probably be passed down the chain from the app delegate to the view
 - The call to grab the image metadata is blocking. It should be done asynchronously. 
-- There seem to be some drawing glitches where CATiledLayer is displaying invalid cached tiles
+- There seem to be some drawing glitches where CATiledLayer is displaying invalid cached tiles. 
 
 ## License
 
